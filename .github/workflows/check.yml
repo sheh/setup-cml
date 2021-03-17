@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: '12'
 
-      - uses: iterative/setup-cml@${GITHUB_REF}
+      - uses: iterative/setup-cml@${{GITHUB_REF}}
         with:
           version: '0.1.30'
           
@@ -46,7 +46,7 @@ jobs:
             exit 1
           fi
   
-      - uses: iterative/setup-cml@${GITHUB_REF}
+      - uses: iterative/setup-cml@${{GITHUB_REF}}
 
       - name: "CML unistall and install latest test"
         if: "!contains(fromJSON(matrix.runs-on).runs-on, 'windows')"
