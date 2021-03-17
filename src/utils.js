@@ -18,6 +18,8 @@ const exec = async (command, opts) => {
 const setup_cml = async opts => {
   const { version } = opts;
   let sudo = '';
+  console.log('Do you see me?');
+
   try {
     sudo = await exec('which sudo');
   } catch (err) {}
